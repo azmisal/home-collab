@@ -1,0 +1,53 @@
+const [login, setLogin] = useState(false);
+  
+  const [registeredEmail, setRegisteredEmail] = useState('');
+  const [registeredPassword, setRegisteredPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const validateEmail = (input) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
+  };
+
+  const validatePassword = (input) => {
+    return input.length >= 6;
+  };
+
+  const handleLogin = () => {
+    if (email === registeredEmail && password === registeredPassword) {
+      onLoginSuccess();
+    } else {
+      setError('Invalid email or password. Please sign up if you do not have an account.');
+    }
+  };
+
+  const handleSignUp = () => {
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email.');
+    } else if (!validatePassword(password)) {
+      setError('Password should be at least 6 characters.');
+    } else if (email === registeredEmail) {
+      setError('This email is already in use. Please use a different email.');
+    } else {
+      setRegisteredEmail(email);
+      setRegisteredPassword(password);
+      setError('');
+      alert('Account created! Please proceed to login.');
+    }
+  };
+
+  const toggleForm = () => {
+    setLogin(!login);
+    setEmail('');
+    setPassword('');
+    setError('');
+  };
+
+
+
+
+
+
+
+  alert("Done");
+      setEmail('');
+      setPassword('');

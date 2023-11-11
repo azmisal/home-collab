@@ -1,0 +1,47 @@
+.controller {
+    border: 1px solid blue;
+    width: 30%;
+    height: 60%;
+    border-radius: 25px;
+    padding-top: 1vw;
+    background-color: #fff;
+}
+
+.power {
+    /* background-color: #a31212; */
+    color: black;
+    border: 1px solid blue;
+    width: 3vw;
+    padding: 5%;
+    height: 3vw;
+    cursor: pointer;
+    border-radius: 22px;
+
+}
+
+.power:hover {
+    background-color: #c20505;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.power:active {
+    background-color: rgb(130, 3, 3);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.check {
+
+    width: 50%;
+    height: 7vh;
+    border: none;
+    border-radius: 15px;
+    background-color: #c1c0c0;
+    cursor: pointer;
+
+}
+.check:hover{
+    box-shadow: rgb(0 108 255 / 35%) 0px 1px 15px;
+}
+.check:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}

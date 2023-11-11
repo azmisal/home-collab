@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/appliance/page.jsx", "src/app/About.jsx", "src/app/Details.jsx", "src/app/Footer.jsx", "src/app/Home.jsx", "src/app/Navbar.jsx", "src/app/appliance/remote.jsx"],
   "exclude": ["node_modules"]
 }

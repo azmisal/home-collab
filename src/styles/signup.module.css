@@ -1,0 +1,113 @@
+.main{
+    /* color: antiquewhite; */
+    color: #000000;
+    background: rgb(11 29 66);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.main h1{
+    font-family: 'Glass Antiqua', cursive;
+    margin: 0;
+    font-size: 61px;
+    font-weight: 700;
+    /* width: 100%; */
+    letter-spacing: 4px;
+    color: #fff;
+}
+.loginform{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.emaill{
+    width: 19vw;
+    padding-left: 1vw;
+    height: 3vw;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+}
+.emaill:focus-visible{
+    outline: none;
+    border: none;
+}
+.passwordl{
+    width: 19vw;
+    height: 3vw;
+    padding-left: 1vw;
+    border-radius: 5px;
+    border: none;
+    margin-top:15px;
+}
+.passwordl:focus-visible{
+    outline: none;
+    border: none;
+}
+.loginbut,.signupbut{
+    font-size: 20px;
+    font-weight: 400;
+    height: 4vw;
+    width: 15vw;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    /* font-size: 24px; */
+    /* font-weight: lighter; */
+    color: white;
+    cursor: pointer;
+
+}
+.toggle{
+    cursor: pointer;
+
+}
+.toggle:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.loginbut{
+    
+    background-color: #333333;
+
+}
+.signupbut{
+    background-color: #474444;
+}
+
+/* input::placeholder {
+    font-size: 18px; 
+}
+
+input{
+    font-size: 18px;
+} */
+.loginquery{
+    font-size: 14px;
+}
+.loglink{
+    cursor: pointer;
+}
+.loglink:hover{
+    color: aqua;
+}
+@media (max-width:450px){
+    .emaill{
+        width: 66vw;
+        height: 12vw;
+    }
+    .passwordl{
+        width: 66vw;
+        height: 12vw;
+    }
+    .loginbut,.signupbut{
+        height: 15vw;
+        width: 49vw;
+      
+    }
+}

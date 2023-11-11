@@ -1,0 +1,39 @@
+.home {
+    align-items: center;
+    /* border-radius: 0 0 10vw 10vw; */
+    background: #00000070;
+    /* background: linear-gradient(28deg,#000 3%,#14213d 44%); */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    padding-top: 13vh;
+    width: 100%;
+}
+.homeleft{
+    text-align: left;
+}
+.LogoName {
+    margin: 0;
+    color: aliceblue;
+    font-size: 85px;
+    font-family: 'Glass Antiqua', cursive;
+}
+
+.logoP{
+    font-family: 'Instrument Sans', sans-serif;
+    color: white;
+    font-size: 22px;
+    width: 81%;
+    text-align: left;
+    margin-top: 1vw;
+}
+@media (max-width: 480px) {
+   .LogoName{
+    font-size: 20px;
+   } 
+}
+
+@media (max-width: 350px) {
+    
+}

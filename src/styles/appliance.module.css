@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Unbounded:wght@200;300;400;500;600&display=swap');
+
+
+.appliance {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    overflow-y: scroll;
+    width: 100vw;
+    grid-template-columns: auto auto auto;
+    /* max-width: 500px; */
+    
+}
+
+.Appli {
+    color: white;
+    font-size: 40px;
+}
+
+.add {
+    /* padding: 2vw; */
+    padding: 0.5vw 1vw;
+    border: 1px solid rgb(0, 136, 255);
+    border-radius: 12px;
+    background-color: #fff;
+    display: flex;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.roomname {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 15px;
+    color: #fff;
+}
+
+.addbut {
+    width: 2vw;
+    height: 2vw;
+    font-weight: 300;
+}
+
+.card {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 7px 29px 0 #64646f33;
+    color: #383843;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    /* height: 14vw; */
+    justify-content: center;
+    margin: 10px;
+    text-transform: uppercase;
+    width: 7vw;
+    padding: 15px 25px;
+    flex-direction: column;
+
+}
+.card p{
+    margin: 0;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.1s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.controlSet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    /* width: 100%; */
+    background-color: #383843;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.roomcards {
+    width: 10vw;
+    display: flex;
+    height: 15vh;
+    margin: 5vw;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.slelectcards {
+    /* background-color: blue; */
+    /* width: 80%; */
+    display: flex;
+    height: 80%;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.slelectcards::-webkit-scrollbar {
+    width: 0;
+}
+
+.addform {
+
+    position: fixed;
+    top: 10vh;
+    right: 1%;
+    width: 25vw;
+    background: #fff;
+    height: 20vw;
+    border: 1px solid blue;
+    display: flex;
+    border-radius: 22px;
+    /* text-align: left; */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.forms {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: red; */
+    justify-content: space-around;
+    height: 70%;
+}
+.back {
+    padding: 0.5vw 1vw;
+    border: 1px solid rgb(0, 136, 255);
+    border-radius: 12px;
+    background-color: #fff;
+    display: flex;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.backarrow {
+    width: 2vw;
+    height: 2vw;
+}
+
+.input {
+
+    border: 1px solid blue;
+    width: 91%;
+    height: 20%;
+    border-radius: 10px;
+    padding-left: 1vw;
+    margin-bottom: 1vw;
+
+}
+
+.submit {
+    width: 40%;
+    margin-top: .5vw;
+    height: 25%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.input:focus-visible {
+    /* border: none; */
+    outline: none;
+}
+
+.remote {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #383843;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    
+    .add {
+        top: 4%;
+        right: 4%;
+        padding: 1vw 1.8vw;
+    }
+
+    .addbut {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .card {
+        font-size: 20px;
+        /* width: ; */
+        
+    }
+}
+@media (max-width: 450px) {
+    .card {
+        font-size: 16px;
+        /* width: 30vw;
+        height: 25vw; */
+        /* margin: 3vw; */
+    }
+}

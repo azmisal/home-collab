@@ -1,0 +1,128 @@
+.details {
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    padding-top: 5vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.det1,.det2 {
+    /* display: flex; */
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4vw;
+}
+.det2{
+    flex-direction: row-reverse
+}
+.dlh1,
+.dlh12 {
+    font-size: 25px;
+    color: #fff;
+    width: 96%;
+    letter-spacing: 1.5px;
+    font-family: 'Glass Antiqua', cursive;
+    margin: 0;
+}
+
+.dlh12 {
+    width: 65%;
+}
+
+.dldiv,
+.dldiv2 {
+    text-align: left;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dldiv2 {
+    align-items: flex-end;
+}
+
+.dlp,
+.dlp2 {
+    font-family: 'Instrument Sans', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    width: 66%;
+}
+
+.dlp2 {
+
+    width: 65%;
+}
+
+.dl1imgdiv {
+    width: 48%;
+    /* overflow: hidden; */
+    height: 81%;
+    display: flex;
+    /* background: blue; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vw;
+    border: none;
+}
+
+.dl1img {
+    border-radius: 25px;
+}
+
+@media (max-width: 1055px) {
+.dl1img{
+    width: 25vw;
+}
+}
+@media (max-width: 700px) {
+    .details{
+        padding-top: 20vw;
+        padding-bottom: 20vw;
+    }
+    .det1,.det2{
+        flex-direction: column;
+        padding: 12vw 10vw;
+        border-radius: 25px;
+        margin-bottom: 20vw;
+        /* padding-top: 12vw; */
+        background: #000000b5;
+    }
+    .det2{
+        margin-bottom: 0;
+    }
+    
+    .dldiv,.dldiv2{
+        align-items: center;
+    }
+    .dlh1, .dlh12 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 2vw;
+    }
+    .dlp, .dlp2 {
+        font-size: 18px;
+        width: 80%;
+        text-align: center;
+        margin-bottom: 6vw;
+    }
+    .dlh12{
+        width: auto;
+    }
+    .dl1imgdiv{
+        width: auto;
+    }
+    .dl1img{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    
+}
