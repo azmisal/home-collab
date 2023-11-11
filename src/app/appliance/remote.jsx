@@ -14,7 +14,9 @@ const Remote = (props) => {
   }
   return (
     <div className={styles.controller}>
-
+<div className={styles.back} onClick={() => setController(false)}>
+            <BiArrowBack className={styles.backarrow} />
+          </div>
       <h1 className="ch1">{props.appliance}</h1>
       <FiPower className={styles.power} onClick={handleSwitch} />
       <h3>state : {state}</h3>
