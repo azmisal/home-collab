@@ -3,25 +3,37 @@
     width: 30%;
     height: 60%;
     border-radius: 25px;
+    display: flex;
     padding-top: 1vw;
-    background-color: #fff;
+    color: c;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .power {
-    /* background-color: #a31212; */
-    color: black;
-    border: 1px solid blue;
-    width: 3vw;
-    padding: 5%;
-    height: 3vw;
-    cursor: pointer;
-    border-radius: 22px;
+        background-color: #a31212;
+        /* color: white; */
+        /* border: 1px solid blue; */
+        width: 60px;
+        padding: 4%;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 22px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .1s ease-in-out;
+
 
 }
 
-.power:hover {
+.power:hover {    
+    width: 65px;
+        /* padding: 5%; */
+        height: 55px;
     background-color: #c20505;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgb(0 0 0 / 71%) 0px 7px 23px 2px;
+    transition: .1s ease-in-out;
 }
 
 .power:active {
@@ -39,9 +51,11 @@
     cursor: pointer;
 
 }
-.check:hover{
+
+.check:hover {
     box-shadow: rgb(0 108 255 / 35%) 0px 1px 15px;
 }
-.check:active{
+
+.check:active {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }

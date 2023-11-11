@@ -48,6 +48,87 @@ const [login, setLogin] = useState(false);
 
 
 
-  alert("Done");
-      setEmail('');
-      setPassword('');
+  const rooms = [
+    {
+      name: 'Bedroom',
+      icon: <IoIosBed />,
+      appliances: ['Bulb 1', 'Bulb 2', 'Fan 1'],
+    },
+    {
+      name: 'Kitchen',
+      icon: <FaKitchenSet />,
+      appliances: ['Bulb 3', 'Microwave', 'Refrigerator'],
+    },
+    {
+      name: 'Toilet',
+      icon: <PiToiletFill/>,
+      appliances: ['Toilet Light', 'Mirror Light'],
+    },
+    {
+      name: 'Dining',
+      icon: <MdDining />,
+      appliances: ['Chandelier', 'Table Light'],
+    },
+    {
+      name: 'Varanda',
+      icon: <BiChair />,
+      appliances: ['Outdoor Light'],
+    },
+    {
+      name: 'closet',
+      icon: <BiCloset />,
+      appliances: ['Outdoor Light'],
+    },
+    
+    {
+      name: 'A room',
+      icon: <IoIosBed />,
+      appliances: ['Bulb 1', 'Bulb 2', 'Fan 1'],
+    },
+    {
+      name: 'B room',
+      icon: <IoIosBed />,
+      appliances: ['Bulb 3', 'Microwave', 'Refrigerator'],
+    },
+    {
+      name: 'C room',
+      icon: <IoIosBed />,
+      appliances: ['Toilet Light', 'Mirror Light'],
+    },
+    {
+      name: 'D room',
+      icon: <IoIosBed />,
+      appliances: ['Chandelier', 'Dining Table Light'],
+    },
+    {
+      name: 'Varanda',
+      icon: <BiChair />,
+      appliances: ['Outdoor Light'],
+    },
+    {
+      name: 'closet',
+      icon: <BiCloset />,
+      appliances: ['Outdoor Light'],
+    },
+    
+    {
+      name: 'A room',
+      icon: <IoIosBed />,
+      appliances: ['Bulb 1', 'Bulb 2', 'Fan 1'],
+    },
+    {
+      name: 'B room',
+      icon: <IoIosBed />,
+      appliances: ['Bulb 3', 'Microwave', 'Refrigerator'],
+    },
+    {
+      name: 'C room',
+      icon: <IoIosBed />,
+      appliances: ['Toilet Light', 'Mirror Light'],
+    },
+    {
+      name: 'D room',
+      icon: <IoIosBed />,
+      appliances: ['Chandelier', 'Dining Table Light'],
+    }
+  ];

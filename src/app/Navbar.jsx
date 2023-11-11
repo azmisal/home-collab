@@ -8,7 +8,6 @@ import { Link as ReactScrollLink, animateScroll as scroll } from 'react-scroll';
 import styles from '@/styles/Navbar.module.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/app/firebase/config';
-// import { animateScroll as scroll } from 'react-scroll';
 const Navbar = ({ show }) => {
   const [toggle, setToggle] = useState(false);
   const [user] = useAuthState(auth);
