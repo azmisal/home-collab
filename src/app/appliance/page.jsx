@@ -70,7 +70,7 @@ const Appliance = () => {
 
       {selectedRoom && select && (
         <div className={styles.controlSet}>
-          
+          <h1 className={styles.applyh1}>{selectedRoom}</h1>
           <Room room={selectedRoom} />
         </div>
       )}

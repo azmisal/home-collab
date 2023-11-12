@@ -37,15 +37,11 @@ const room = (props) => {
 
     return (
         <div className={styles.appcontent}>
-            <h2 className={styles.roomname}>{selectedRoom.room}</h2>
+            
             <div className={styles.back} onClick={() => setSelect(false)}>
                 <BiArrowBack className={styles.backarrow} />
             </div>
-            <div className={styles.add} onClick={() => setAdd(!add)}>
-                <GrAdd className={styles.addbut} />
-            </div>
             
-
             <div className={styles.slelectcards}>
 
                 {appliances.map((appliance, index) => (
