@@ -13,7 +13,7 @@ const Remote = (props) => {
 
   useEffect(() => {
     const fetchApplianceData = async () => {
-      await axios.post("/api/appliances",{option:3,connectionNumber})
+      await axios.post("/api/appliances",{option:3,connectionNumber,userId})
       .then(
         (res)=>{
           console.log(res);
@@ -26,7 +26,7 @@ const Remote = (props) => {
 
 
 async function update(val){
-  await axios.post("/api/appliances",{option:4 , connectionNumber,val})
+  await axios.post("/api/appliances",{option:4 , connectionNumber,val,userId})
   .then(
     (res)=>{
         if(res.data.status==1){
@@ -74,7 +74,7 @@ async function update(val){
       <div className={styles.controller}>
           {appliance && appliance.length > 0 &&(
               <>
-                   <h1 className="ch1">{appliance[0].appliance}</h1>
+                   <h1 className={styles.remoteName}>{appliance[0].appliance}</h1>
                   
                   <FiPower className={styles.power} onClick={handleSwitch} />
                   <h3>state: {state === 1 ? 'on' : state === 0 ? 'off' : 'not Responding'}</h3>

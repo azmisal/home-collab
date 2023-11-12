@@ -17,10 +17,10 @@ const Appliance = () => {
   const [select, setSelect] = useState(true);
   const [controller, setController] = useState(true);
   const [rooms, setRooms] = useState([]);
-
+  const userId = JSON.parse(localStorage.getItem('userId'));
   useEffect(() => {
     const fetchRooms = async () => {
-      await axios.post("/api/appliances",{option:1})
+      await axios.post("/api/appliances",{option:1,userId})
       .then((res)=>{
         console.log(res);
         setRooms(res.data.uniqueRooms);
@@ -29,7 +29,7 @@ const Appliance = () => {
 
     fetchRooms();
   }, []);
-
+  
   
 
 
@@ -70,6 +70,9 @@ const Appliance = () => {
 
       {selectedRoom && select && (
         <div className={styles.controlSet}>
+          <div className={styles.back} onClick={() => setSelect(false)}>
+                <BiArrowBack className={styles.backarrow} />
+            </div>
           <h1 className={styles.applyh1}>{selectedRoom}</h1>
           <Room room={selectedRoom} />
         </div>

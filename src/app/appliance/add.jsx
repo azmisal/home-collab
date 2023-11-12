@@ -10,13 +10,16 @@ import styles from "@/styles/appliance.module.css";
 
 const Add = () => {
 
-    const [formData, setFormData] = useState({
-        room: '',
-        appliance: '',
-        connectionNumber: '',
-        type: '', // Add an initial value here
-        status: 1,
-      });
+  const userId = JSON.parse(localStorage.getItem('userId'));
+
+  const [formData, setFormData] = useState({
+    room: '',
+    appliance: '',
+    connectionNumber: '',
+    type: '', // Add an initial value here
+    status: 1,
+    userId: userId,
+  });
       
 
       const handleInputChange = (event) => {
@@ -38,8 +41,8 @@ const Add = () => {
             connectionNumber: formData.connectionNumber,
             type: formData.type,
             status:1,
+            userId:userId,
           });
-        //   setFormData('');
           alert("Document written with ID: " + docRef.id);
           setAdd(false)
         } catch (e) {

@@ -17,7 +17,7 @@ const room = (props) => {
 
     useEffect(() => {
         const fetchAppliances = async () => {
-            await axios.post("/api/appliances",{option:2 , param})
+            await axios.post("/api/appliances",{option:2 , param , userId})
             .then((res)=>{
                 setAppliances(res.data.appliancesData)
             })
@@ -38,9 +38,7 @@ const room = (props) => {
     return (
         <div className={styles.appcontent}>
             
-            <div className={styles.back} onClick={() => setSelect(false)}>
-                <BiArrowBack className={styles.backarrow} />
-            </div>
+            
             
             <div className={styles.slelectcards}>
 
@@ -58,6 +56,9 @@ const room = (props) => {
                 
             </div>
             {remote && <div className={styles.remote}>
+            <div className={styles.back} onClick={() => setRemote(false)}>
+                <BiArrowBack className={styles.backarrow} />
+            </div>
                     <Remote appliance={select}/>
             </div>
             }
