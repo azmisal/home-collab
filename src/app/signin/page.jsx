@@ -6,7 +6,7 @@ import { auth } from '@/app/firebase/config';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useState, useEffect } from 'react';
 import styles from '@/styles/signup.module.css';
-import { useRouter } from 'next/router'; // Correct import
+import { useRouter } from 'next/router'; 
 
 const Signin = () => {
   const [email, setEmail] = useState('');
@@ -26,15 +26,14 @@ const Signin = () => {
         return;
       }
       const res = await signInWithEmailAndPassword(email, password);
-
+      console.log(res.user.uid);
+      localStorage.setItem('userId', JSON.stringify(res.user.uid));
       if (res.user) {
         const newToken = {
           token: 'your_generated_token',
           expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), 
         };
-
         localStorage.setItem('userToken', JSON.stringify(newToken));
-
         router.push('/');
       }
     } catch (error) {
@@ -54,7 +53,6 @@ const Signin = () => {
     }
   };
 
-  // useEffect to check and refresh the token on component mount
   useEffect(() => {
     handleSignin();
   }, []);
@@ -86,8 +84,8 @@ const Signin = () => {
         </button>
       </form>
       <p className={styles.loginquery}>
-        Don't have an account? <Link href="/signup" passHref><p
-         className={styles.loglink}>Signup</p></Link>
+        Don't have an account? <span
+         className={styles.loglink}><Link href="/signup" passHref>Signup</Link></span>
       </p>
     </div>
   );
