@@ -1,5 +1,6 @@
 //@ts-nocheck
 "use client"
+import axios from "axios"
 import { useState, useEffect } from 'react';
 import styles from "@/styles/appliance.module.css";
 import { BiArrowBack } from "react-icons/bi";
@@ -15,6 +16,21 @@ const Appliance = () => {
   const [selectedAppliance, setSelectedAppliance] = useState(null);
   const [select, setSelect] = useState(true);
   const [controller, setController] = useState(true);
+  const [rooms, setRooms] = useState([]);
+
+  useEffect(() => {
+    const fetchRooms = async () => {
+      await axios.post("/api/appliances",{option:1})
+      .then((res)=>{
+        console.log(res);
+        setRooms(res.data.uniqueRooms);
+      })
+    };
+
+    fetchRooms();
+  }, []);
+
+  
 
 
 
@@ -37,16 +53,16 @@ const Appliance = () => {
       <div className={styles.add} onClick={() => setAdd(!add)}>
         <GrAdd className={styles.addbut} />
       </div>
-      <h1 className={styles.applyh1}>Appliances</h1>
+      <h1 className={styles.applyh1}>Rooms</h1>
       <div className={styles.appcontent}>
-        {appliances.map((room) => (
+        {rooms.map((room,index) => (
           <div
             className={styles.card}
-            key={appliances.room}
-            onClick={() => handleRoomClick(room)}
+            key={index}
+            onClick={() => handleRoomClick(room.room)}
           >
-            {/* {room.icon} */}
-            <p>{appliances.room}</p>
+            
+            <p>{room.room}</p>
           </div>
         ))}
       </div>
@@ -68,11 +84,7 @@ const Appliance = () => {
         </div>
       )}
 
-      {selectedAppliance && controller && (
-        <div className={styles.remote}>
-          <Remote appliance={selectedAppliance} />
-        </div>
-      )}
+      
     </div>
   );
 }

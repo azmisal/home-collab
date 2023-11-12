@@ -1,6 +1,55 @@
-import React from 'react'
+"use client"
+import { useState } from 'react';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebase/config'; // Make sure you have the correct path to your firebase config
+import styles from "@/styles/appliance.module.css";
+
+
+
+
 
 const Add = () => {
+
+    const [formData, setFormData] = useState({
+        room: '',
+        appliance: '',
+        connectionNumber: '',
+        type: '', // Add an initial value here
+        status: 1,
+      });
+      
+
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+      };
+
+
+      const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+          const docRef = await addDoc(collection(db, "appliances"), {
+            room: formData.room,
+            appliance: formData.appliance,
+            connectionNumber: formData.connectionNumber,
+            type: formData.type,
+            status:1,
+          });
+        //   setFormData('');
+          alert("Document written with ID: " + docRef.id);
+          setAdd(false)
+        } catch (e) {
+          alert("Error adding document: " + e);
+        }
+      };
+
+
+
+
   return (
     <div className={styles.add}>
         <form onSubmit={handleSubmit} className={styles.forms}>
@@ -31,7 +80,6 @@ const Add = () => {
               onChange={handleInputChange}
             />
 
-            {/* Selection box for the "type" field */}
             <select
               className={styles.input}
               name='type'
@@ -59,4 +107,4 @@ const Add = () => {
   )
 }
 
-export default A
+export default Add;
